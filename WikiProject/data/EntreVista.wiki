@@ -1,0 +1,41 @@
+﻿++ Entre Vista
+
+Anire al lloc on m'ofereixin mes llibertat creativa
+
+Parlo l'idioma dels jefes i el dels programadors
+
+Puc dissenyar a nivell de historia/jugabilitat/estetica/codi/motor de fisiques
+
+Sé dibuixar, faig teatre, tinc un bon rerafons literari 
+
+Aprecio els seguents jocs:
+# sims
+# puzzlepirates
+# katamari damacy
+# quake 3 (sobretot la pantalla de l'espai)
+# tower build
+# burrito revenge/ yeti sports
+# tower defense
+# Tots els jocs de Cactus
+
+He fet els seguents jocs:
+# milky way
+# kill bisbi
+
+M'agrada dissenyar jocs
+# en 2d
+# senzills de implementar pero que generen diversio
+
+No soc tant bo en jocs on no passi el temps:
+# dissenyan puzzles
+# dissenyant jocs d'inventari
+
+Tinc sota la maniga
+
+# un joc per apendre musica social
+# un tower defense musical i social molt senzill d'implementar
+
+# un joc per a "petits ingeniers sense coneixement" de fer robots i ferlos lluitar
+# un minijoc d'acció implementable en una setmana Zvastical
+
+QueMagradaDeMilkyWay

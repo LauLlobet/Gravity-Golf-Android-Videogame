@@ -1,0 +1,267 @@
+﻿++ To Do Antic
+
+
+Milkyway 0.3 a Milkyway 1.0 (engine done)
+
+Es pot fer pop a alguns planetes amb el cursor durant el joc
+Es poden moure alguns planetes amb el dit avans de llençar
+
+Milkyway XML 0.22 a 0.23
+
+- fer que dt-fisiques vagi per xml de variables
+- fer que es guardin els efectes nous en xml
+- fer que es guardin les pareds/asteroides en xml
+
+
+Milkyway 0.21 a Milkyway 0.22 OCTUBRE
+
+- limitar calculs per iteracio
+- rebots en un limit de velocitat = romandre quiet
+- perdua de energia:
+	- percentatge de rebot xml
+- destruccio de pareds
+- friccio com a força
+	- percentatge de perdua
+	- destruccio de pared d’asteroides
+- desaparicio de planeta progresiva amb atribut propi
+
+
+++FET
+
+
+Milkyway 0.21 a Milkyway 0.22
+
+Ajustar fisiques perque:
+
+GRAVETAT PRECISA:
+	- insertar bucle dins efecto gravedad amb variable dt-fisica
+
+	- comprovar rebot perfectes
+	- treure sleeps
+	- posar variables de calcul de temps en Mesa
+	- calcular si es posible dt = 0.01ms en pc
+	- comprovar si es proporcional el numero d’iteracions amb el temps perdut
+
+	- refer rellotge de part movil
+	- desactivar sleeps
+	- mostrar per pantalla al cap de n calculs el temps que han tardat per iteracio
+	- preparar 1 apk que calculi el temps per 0.1 0.05 0.001 i els mostri per pantalla
+	- enviar apk al kobe
+	- fer que el ordinador faci sleeps equivalents a la velocitat del movil del kobe
+	- limitar el total de calculs a fer en cada iteracio per a n planetes
+	- fer calcul de rendiment amb un planeta 
+- fer proves de rendiment amb mes d’un planeta 
+
+REBOTS
+	- activar rebots grans, nomes cal bastament,rebot?-> reflexar velocitat estat ant
+	- habilitar un algorisme que detecti un canvi de sentit tipu gir que resulti en un no rebot
+
+TREMOLORS
+	- no hi hagin tremolors-> estat velocitat petita
+	- força normal 
+
+REBOTS I RENDIMENT EN PARED
+	- fer pareds sense efecte gravetat
+	- fer pareds amb efecte gravetat distribuit cada 4 pixels
+	- fer densitat de dt-fisica variable en funcio de la proximitat
+	- fer proves de pareds amb gravetat
+
+FRICCIO
+	- la friccio actui sobre la força i no sobre la velocitat
+
+Fer que desaparece() sigui una animacio sobre la masa per a provocar rebots suaus en les desaparicions
+
+ERRORS
+
+error de concurrencia en la trajectoria VectorEscenario getTrajectoria
+
+**jugant es poden destruir, editantse es poden reformular els planets k la composen
+
+PAREDS 
+Definirla com a objecte:
+- relacions de densitat i espesor
+- composicio de planetes
+- funcio de actualitza
+- funcions de set x i y
+- funcions de rebot afectaMovil → buscar la rodona mes propera
+- comprovar que el movil es queda quiet en parets concaves
+- funcions afecta movil gravetat
+- funcions friccio
+- funcions pop
+- movil afecta planeta en aplicar efecte
+- per a cada velocitat de rebot disminuida / per velocitat disminuida
+- afecta un planeta
+- unitat d’eneregia propia per a poguer elevar al cuadrat friccio
+- afecta a un Asteroide
+- afecta un planeta i no l’afecta cuan tremola (si fisiques ok => ok)
+- afecta forma,velocitat reduida afecta l’abast horitzontal de l’afecte
+- movil es pot autoesborrar d’elementos o anul·lar 
+	
+Introduir Sequencia de rodones per formar paret
+	mirar que funcioni per mes de dos punts
+	fer que l’editor pugui posar els punts apretant o i parant amb i 
+	fer que el drag mouse afegeixi n punts
+	mirar perque no colisiona el planeta mes proper
+
+Benchmarking de la paret ( nomes per a saber que no es aixo el que alenteix en futurs benchmarkings ja que el pintat sera via imatge ) 
+	- crear bucle for de nombre de rodones a pintar alhora
+	- fer que es pinti la pared en la aplicacio movil
+	- omplir de paret tota la aplicacio
+	- provar
+
+Com que el benchmark ha donat mals resultats, en versio android :
+	- crear una imatge del tamany de la pantalla transparent 
+	- convulsionar totes les parets a sobre
+	- fer que es pinti en android 
+
+Com que trobo irregularitats en la velocitat del joc faig un medidor de temps entre cicles
+	- medir temps entre iteracions, maxim i minim
+	- printar temps maxim i minim a la pantalla del android
+
+
+
+
+
+Millorar MilkyWay0.2 a MilkyWay0.21
+
+Altres
+	homogenitzar duo pantalla-elementos
+Fisiques
+	Força de friccio perque la bola quedi quieta i no llisqui cap els planetes propers
+	Rotacio de la bola
+Vista	
+	zoom sigui respecte la distancia al centre per no tenir dobles zooms als racons
+	zoom progressiu cuan el satelit canvia de lloc al final d’una pantalla
+Pintat
+	pintat de planetes/dianes/marques
+	pintat de tirachinas
+	pintat de la curva de trajectoria amb alphas i llargada variable
+Solucio 
+calcular distancia recorreguda fins arribar a diana
+Audio
+	crear fades in i fade out per a inci de fisiques i fi de fisiques
+	fer que render sound s’anticipi amb un lag de temps al joc
+
+
+
+Millorar MilkyWay0.1 a MilkyWay0.2
+
+Fisiques
+	fisiques de rebot no funcionen amb planetes junts
+
+android
+	fer que no peti cuan es surt de la applicacio
+	mirar que l’apk sigui instalable
+
+pantalla
+	implementar escalat / desplaçat de coordenades en elemento, rectangular i circular
+	implementar calculador de centre i de reescalat si el movil surt de la pantalla
+	us de gets de coordenades relatives en el pintador d’android
+	implementar escalat base per a pantalles d’android
+	implementar input de tirachines per a pantalles d’android
+
+disseny de pantalles
+	drag de planetes/movil/diana
+	increment de radi / masa apretant un boto
+	salvat de pantalles en un arxiu
+	carregat de pantalles desde arxiu
+	fer run de la pantalla
+
+solucio de pantalles
+	crear prog amb java simplificant els calculs 
+IN: x,y, iteracions maximes
+	OUT: vermell no xoca, verd xoca, taronja es perd
+	crear crida en matlab per tots els punts
+	exportar figura 
+crear crida en java que cridi matlab
+carregar fons amb solucio
+
+audio
+	linkar llibreries de pd i fer que funcioni
+	crear funcio renderSound en el bucle del joc
+	crear efecte dopler en un patch de pd
+
+
+
+
+
+Importar MilkyWay0.1
+
+Proces de la Dt amb milisegons
+	mirar com ho fa en el lunar lander
+	implementar-ho en el planetslite
+	implementarho en l’esquelet
+Mirar acces al xml per al parser
+Desacoblar printf’s
+Desacoplar inputs
+Desacoplar pintat d’elements
+	Crear classe pintadora
+	Crear map de location resource a resource en si 
+	Desacoblar pintat en planetslite
+Crear classe input adapter
+Crear classe pintadora a milkyway
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Implementar OrbitalGolf_1.0
+
+Elementos
+	Crear tipus estrella 
+	Crear tipus marca tirada
+	Eliminar estrelles tocades
+
+Implementar millora de codi de LitePlanets0.2
+
+Unificar elementos
+	subclase cercle i efectos coherents
+	flag debug_on en variables
+efecto rebote independent de geometira per habilitar rebotar amb png’s
+	clone de la pantalla per a poguerla recarregar
+	es rebota a un marge del planeta .. inspecionar margen rebote i estats
+	a vegades el mobil surt disparat
+	colisio amb inercia no te en compte x0 y0
+	
+Fisica
+	eliminar temblor del planeta
+	aplicar fricion a efecto inercia i colisio i pintat
+Logica
+	restart automatic si temblor o si v=0
+	habilitar mode debug
+	repasar casos temblor
+	menus amb teclat
+
+Sense valors hardcodeijats, tot es treu d’un xml
+	eliminar assignar atributs per defecte i constructors buits
+	cargar pantallas desde xml
+	compovar que funcionin pantallas
+
+Animacions
+	habilitar animacions
+	crear animacions d’estela de la cua
+
+Modular de cara a les actualitzacions
+input mouse:
+	handler del tracking del mouse constant
+	tirachinas del movil al estat lamnzamiento
+
+

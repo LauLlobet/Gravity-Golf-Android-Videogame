@@ -1,0 +1,59 @@
+﻿
+
++EntreVista <---------
+
+++VersionsAntigues
+
+++TODOLIST
+
+# instalar sdk
+# fer que rutlli el projecte (esperem)
+# empaquetar i facturar codi de rebots i alta elasticitat
+# empaquetar llibreria d'audio PD de moment comentada
+# dissenyar codi
+08/05/13 11:42 
+# restaurar versio octubre
+# ferla compilar
+# comprovar a veure si es restaurable
+# fer informe de les ultimes tecnologies afegides
+
+
+++ Versio android
+
+ConfiguracioWorkespaceAndroid
+
+
+
+++STEPSTONES de la branca [master]
+
++++ 0.22 Compilable en pc i android 
+
++++ 0.23 Running sense resolucio temporal alta / Entendre rebots i rellotges
+
++++ 0.24 Més d'un satel·lit en interaccio gravitatoria / aura de no rebot
+
++++ 0.25 Pareds que destrueixen satel·lit
+
++++ 0.26 Bolos grans i bolos petits
+
++++ 0.3 Steady al principi del fluxe de joc
+
++++ 0.31 Explosionador
+
++++ 0.32 Dissenyar primera pantalla
+
++++ 0.4 Fer la pantalla executable en android
+
+
+
+
+++ Estructura Codi
+
+FisicaMecanica
+
+
+++ Commit sandbox
+
+
+
+	* WikiSettings

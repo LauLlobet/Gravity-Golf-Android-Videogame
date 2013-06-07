@@ -1,0 +1,34 @@
+﻿++ Fisica Mecanica
+
+
+
++ Reestructuració del codi per a rebots mes acurats en general
+
++++ Solució 1 : compatibilitzar gravetat exhaustiva amb gravetat basta
+[SaltsCompatibles]
+- escollir el planeta que exerceix mes canvis de força al llarg de l'espai
+- calcular intensivament fins a una vf,xf
+- trobar una força equivalent? substituint la xi yi   ( f + vinit + xinv ) = vfin + xfin
+
++++ Solucio 2 : fer mes intensiu el bucle general fins a trobar un compromís rendiment/acuracitat
+[GeneralIntensiu]
+- per a múltiples movils caldrà finura temps variable per a cada un d'ells
+
++++ Solucio 3 : optimitzar un bucle que ho inclogui tot rebots/normals/friccio/acuracitat
+[ConcretIntensiu]
+DigresionCalculRebotsOptimitzat ( Ideea mes bona es el triangle de possibles chocs ) dona molta feina
+
+
+
++ Rebots de discos de diferent masa i tamany en 2d
+
++++ Casos en que s'aplica
+[PerduaEnergiaRebots]
+- canvi de velocitat  -> SEMPRE en parella (masa infinita) -> si no han xocat ja
+- perdua energia      -> SEMPRE en parella -> si no han xocat ja
+- normal              -> SEMPRE en parella (perque la suma de forces no es alterada per l'ordre dels calculs de xoc efec.segundos vs efec.primeros
+
++++ Calculs
+[CalculRebotDiscos]
+- es un xoc en una dimensio que es la linea que uneix els dos centres, les normals a la linea aquesta es deixa com estava  
+  

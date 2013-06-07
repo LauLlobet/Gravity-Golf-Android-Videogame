@@ -1,0 +1,5 @@
+﻿++ Configuracio Workespace Android
+
++++ habilitar correr en un device extern
+http://developer.android.com/tools/device.html
+

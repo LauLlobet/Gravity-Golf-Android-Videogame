@@ -1,0 +1,44 @@
+﻿++ Digresion Calcul Reboti Normal
+
+el tractament de la gravetat es a nivell de posicio i velocitat, com podem estabilitzar un movil a sobre ?
+
+podem fer una normal a mida a partir de les forçes acumulades en la fase de gravetats ?? Si pero nomes una normal per un movil ja que el xoc es calcula en l'instant de temps mes curt 
+
+La normal es
+# anulació de forçes ( repos! )
+# inversio de la velocitatY
+
+El comput d'un rebot ¿atura el temps?
+# si la anulacio de forces i la inversio de vY es fa sobre la marxa no caldra
+# si tenim en compte la friccio en tot aquest proces ? S'aplica la friccio amb precisió? -> Si si a cada miniteracio es descompta 
+
+ 
+Si la normal esta ben feta els movils tendeixen al repos ? 
+
+# la anulacio de forces impedeix incrementar velocitatY
+# la inversio de velocitat Y es va fent cada vegada mes petita degut al desgast
+# ANULACIO DE FORCES ACABA SENT: *L'inversio de velocitats pasa a ser la anul·lacio de velocitats*
+# *PERO LA FASE DE REPOS S'HA DE CALCULAR DESPRES DE L'APLICACIÓ DE TOTES LES FORÇES*
+
+
+*Jo faria:*
+# es calculen les forçes resultants resumides per separat encara que amb detall intern 
+    #   es poden resumir les forçes detallades? 
+        # son una nova posicio
+        # velocitat
+# *no* , calcularia les velocitats finals i posicions amb detall(rebots inclosos) de manera sequencial i per ultim es fa la pasada de les normals que trunca velocitats i posicions extrañes
+# Que pot pasar amb planetes de costat, s'ha de mirar el xoc contra tots els planetes del voltant
+    # formula: despres d'efectuar el recorregut ... mirar si hi ha interseccio entre linea inicial i final i cercles, si n'hi ha tornar enrera
+    # formula2: mirar si hi han planetes propers
+    # *si* :
+        # ordenar planetes de mes *proper a xoc(no proper de centres)* a menys
+        # calcular sobre la marxa i en sequencia, guardar els rebotats 
+        # per cada nou planeta de la sequencia despres d'acabarla mirar si sobre la linea ha creuat planetes 
+
+
+
+
++++++++es podria fer que el movil desaparegues si es queda sobre un planeta quiet , no hi hagues repos, el satel·lit es calenta tant en contacte amb aquest sol que que acaba cremantse 
+
+tenir multiples movils reposant sobre planetes pot desencadenar un cost computacional molt alt
+

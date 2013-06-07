@@ -1,0 +1,5 @@
+﻿++ Perdua Energia Rebots
+
+        canvi de velocitat propi DV en modul ? es el que desgasta ? si un bixu surt disparat perd molta energia
+        que fer en cas de xoc amb un planeta estatic? com es reparteix la energia ? A meitats ??
+        Fem que cada planeta/movil te un coeficient de rebot per als que reboten contra ells i aquest li descompta energia propia

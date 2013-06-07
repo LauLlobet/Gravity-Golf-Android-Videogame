@@ -1,0 +1,42 @@
+<variables>	
+   
+   <Reloj>
+       <fps>45</fps>
+   </Reloj>
+   
+   <DetectorTemblores>
+      <apertura_maxima>0.52</apertura_maxima>
+      <similitud_velocidades>0.001</similitud_velocidades>
+      <velocidad_minima_parado>0.1</velocidad_minima_parado>
+      <velocidad_temblor>0.3</velocidad_temblor>
+      <longitud_buffer>20</longitud_buffer>
+   </DetectorTemblores>
+   
+   <EfectoRebote>
+       <efecto_rebote_v_limit>0.1</efecto_rebote_v_limit>
+       <efecto_rebote_margen>5</efecto_rebote_margen>
+   </EfectoRebote>
+	
+	<EfectoGravedad>
+		<constante_gravitacional>2</constante_gravitacional>
+	</EfectoGravedad>
+
+
+   <Logica>
+       <factor_v_dedo>0.02</factor_v_dedo>
+       <debug_on>false</debug_on>
+   </Logica>
+   
+   <MarcaTirada>
+       <marca_textura>marcaTirada.png</marca_textura>
+   </MarcaTirada>
+   
+ 	<nube_polvo>
+		<polvo_textura>polvo.png</polvo_textura>
+		<radio_polvo>5.0</radio_polvo>
+		<separacion_polvos>30.0</separacion_polvos>
+		<numero_polvos>5</numero_polvos>
+	</nube_polvo>
+		
+</variables>
+   

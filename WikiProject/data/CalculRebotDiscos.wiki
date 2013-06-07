@@ -1,0 +1,12 @@
+﻿++ Calcul Rebot Discos
+
+2. Find the line connect center of two balls. and calculate the component of the velocitry for each ball alone the line connect those two balls. 
+ For example : Velocity for each ball is Va and Vb (before collision)
+  Calculate Vap and Vbp. (and another normal component Van,Vbn)
+3. It is become a 1D collision problem: ball A with velocity Vap collide with ball B with velocity Vbp . You should be able to calculate velocity after collision for each ball.
+  for example: 
+  Vap2=((m1-m2)/(m1+m2))vap+ (2m2/(m1+m2))Vbp and
+  Vbp2=(2 m1/(m1+m2))Vap+((m2-m1)/(m2+m1))Vbp
+  The tangential component is not changed Van2=Van, and Vbn2=Vbn
+4. Calculate the vector sum for velocity of each ball after collision
+  Va2=Vap2+Van2 and Vb2=Vb2p+Vbn2 (vector summation)

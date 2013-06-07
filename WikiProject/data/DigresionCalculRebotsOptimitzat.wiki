@@ -1,0 +1,40 @@
+﻿++ Digresion Calcul Rebots Optimitzat
+
+
+
+++++ Com es calcula la friccio?
+de moment ho deixem per a versions futures? en principi s'hauran acumulat les diferents forçes durant els calculs independents i per ordre , al planeta se li aplicara una posicio disminuida en proporcio a aquesta força posada a la velocitat final i la velocitat final sera tambe disminuida o situada a 0 ?
+Es poden aplicar aquestes dues mesures alhora ? o pertanyen a temps diferents ? S'ha de tenir en compte que la friccio ha de permetre a un movil el quedarse totalment quiet . S'ha de considerar tambe el cas de un planeta sense pes envoltat de friccio i que el movil que hi reposa a sobre es vagi desplaçant poc a poc cap ell.
+
++ Com  es calculen els rebots i la normal? 
+ DigresionCalculRebotiNormal
+
+++++Codi , estructura
+# Es faran els calculs *en detall i intercalats* entre Afectadors, calculant la força total i la normal
+# es calculara un triangle i d'aquest en sortirar una *llista de posibles planetes amb els que rebotar*
+# en la avaluació de rebot ja hi haura inclosa la clausula de reflexar la velocitat, el NotInPlanet també es fara
+# la friccio continuara sent un efecto extern que s'aplicara sobre la velocitat *si* 
+
+++++Com gestionar el temps:
+# es poden fer poques iteracions de tots els elements amb molta precisio interna -> *rebots precisos*
+# es poden fer moltes iteracions del conjunt amb menys precisio interna -> *comportament a gran escala més coherent*
+# si hi han lineas molt fines i pesades es pot disparar el cost de ResolucioIteracions
+
+++++Rendiment del codi
+# com iterar sobre tots els afectadors -> << ArrayList [ x, y, massa ]>>
+# com comparar rebots 
+
+++++Todo de codi:
+# *[DONE]*  implementar funció sobre vector escenari de Circular mes proper *movils inclosos*
+# deixar nomes els efectos EfectoGravedad (1) EfectoFriccion (2) EfectoNormal (3) EfectoMinvarMassa (4)
+# comentar codi de ResolucioIteracions variable segons distancia al planeta
+# fer que EfectoGravedad no es executi per cercles de pes 0 
+# implementar estructura del codi on hi haura
+    # calcul llista de candidats a rebot
+        # funcio que calcula linea magnetica
+        # calcul de punt velocitat
+        # calcul not in triangle -> vector de candidats
+    # gravetat per a cada un 
+    # comparar amb candidats a rebot
+# testeigar per a tres planetes
+# testeigar per a forma i planetes

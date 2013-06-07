@@ -1,0 +1,19 @@
+﻿++ master
+
++++ 0.22 Compilable en pc i android 
+
++++ 0.23 Running sense resolucio temporal alta / Entendre rebots i rellotges
+
++++ 0.24 Més d'un satel·lit en interaccio gravitatoria / aura de no rebot
+
++++ 0.25 Pareds que destrueixen satel·lit
+
++++ 0.26 Bolos grans i bolos petits
+
++++ 0.3 Steady al principi del fluxe de joc
+
++++ 0.31 Explosionador
+
++++ 0.32 Dissenyar primera pantalla
+
++++ 0.4 Fer la pantalla executable en android
